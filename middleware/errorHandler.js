@@ -39,6 +39,12 @@ const errorHandler = (err, req, res, next) => {
       });
       break;
     default:
+      // console.log('statuc code ' + statusCode);
+      res.json({
+        title: 'Validation Failed',
+        message: err.message,
+        stackTrace: err.stack,
+      });
       console.log('No error all good!');
       break;
   }
