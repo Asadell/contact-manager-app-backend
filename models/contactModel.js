@@ -2,7 +2,7 @@ const mongoose = require('mongoose');
 
 const contactSchema = mongoose.Schema(
   {
-    // _id: mongoose.Schema.ObjectId,
+    // _id: String,
     name: {
       type: String,
       required: [true, 'Please add the contact name'],
